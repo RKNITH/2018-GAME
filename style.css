@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(250, 242, 242);
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 420px;
+    width: 420px;
+    background-color: rgb(0, 0, 0);
+    margin: 20px;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0px 4px 10px rgba(245, 8, 8, 0.7);
+}
+
+.grid div {
+    border: solid rgb(68, 65, 65) 2px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(167, 154, 154);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 52px;
+}
+
+.scoreContainer {
+    position: fixed;
+    bottom: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 70px;
+    justify-content: center;
+}
+
+#score {}
+
+.header {
+    position: fixed;
+    top: 20px;
+    font-size: 100px;
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-fill-color: #a204eb;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #2401a5;
+}
+
+.instructions {
+    position: fixed;
+    top: 190px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+#result {
+    text-align: center;
+    margin: 10px;
+}
+
+@media screen and (max-width: 680px) {
+    .grid {
+        width: 100vw;
+        height: 100vw;
+        margin: 0;
+    }
+
+    .grid div {
+        width: calc(25vw - 4px);
+        height: calc(25vw - 4px);
+        line-height: calc(25vw - 4px);
+        font-size: calc(25vw / 2);
+    }
+
+    .header {
+        font-size: 10vw;
+    }
+
+    .instructions {
+        top: 15vw;
+        font-size: 5vw;
+    }
+
+    .scoreContainer {
+        font-size: 8vw;
+        bottom: 5vw;
+    }
+}
